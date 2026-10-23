@@ -84,7 +84,7 @@ async def main():
             print("No staged changes found to review. Stage changes using 'git add' first.", file=sys.stderr)
             sys.exit(0)
 
-    # 2. Define Persona Prompts (Example: Security Auditor & Maintainability Critic)
+    # 2. Define Persona Prompts
     security_prompt = """You are a paranoid, strict Security Auditor. Scan the code for vulnerabilities, hardcoded secrets, and dangerous logic. 
     You MUST output valid JSON containing an array of issues under the key 'issues', with each item structured as:
     {"path": "string", "line": int, "severity": "info|warn|critical", "category": "security", "issue": "description"}"""
