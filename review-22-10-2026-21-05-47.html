@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Review Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .issue {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+        .critical {
+            border-left: 5px solid #e74c3c;
+        }
+        .warn {
+            border-left: 5px solid #f39c12;
+        }
+        .info {
+            border-left: 5px solid #3498db;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 7px;
+            border-radius: 3px;
+            color: #fff;
+            font-size: 0.8em;
+        }
+        .badge.critical {
+            background-color: #e74c3c;
+        }
+        .badge.warn {
+            background-color: #f39c12;
+        }
+        .badge.info {
+            background-color: #3498db;
+        }
+        .category {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Code Review Report</h1>
+
+    <div class="issue critical">
+        <span class="badge critical">Critical</span>
+        <span class="category">Security</span> - Hardcoded secret detected: API key is hardcoded in the source code.
+        <br><strong>File:</strong> main.py, <strong>Line:</strong> 9
+    </div>
+
+    <div class="issue warn">
+        <span class="badge warn">Warning</span>
+        <span class="category">Security</span> - Function 'calculate_total' returns a float but is annotated to return an int.
+        <br><strong>File:</strong> main.py, <strong>Line:</strong> 5
+    </div>
+
+    <div class="issue info">
+        <span class="badge info">Info</span>
+        <span class="category">Style</span> - Variable 'x' should have a more descriptive name, such as 'total_sum', to improve code readability.
+        <br><strong>File:</strong> path/to/your/file.py, <strong>Line:</strong> 6
+    </div>
+
+    <div class="issue info">
+        <span class="badge info">Info</span>
+        <span class="category">Style</span> - Consider using a more descriptive print statement for the value of pi, such as 'Mathematical constant pi is: {math.pi}'.
+        <br><strong>File:</strong> path/to/your/file.py, <strong>Line:</strong> 10
+    </div>
+
+    <div class="issue warn">
+        <span class="badge warn">Warning</span>
+        <span class="category">Style</span> - The list of prices in 'calculate_total' should be defined as a constant or passed as an argument to improve maintainability.
+        <br><strong>File:</strong> path/to/your/file.py, <strong>Line:</strong> 11
+    </div>
+</body>
+</html>
